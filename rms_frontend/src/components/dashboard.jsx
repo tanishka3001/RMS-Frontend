@@ -13,15 +13,15 @@ const Dashboard = () => {
             className="w-[35px] h-[35px] md:w-[50px] md:h-[50px] ml-4 "
           ></img>
         </nav>
-        <div className=" absolute w-full h-[3px] bg-[#6f5af5]  shadow-[0_0_20px_#6f5af5]"></div>
-        <div className="absolute mt-20 md:mt-24 w-full h-[3px] bg-[#6f5af5]  shadow-[0_0_20px_#6f5af5]"></div>
+        <div className=" absolute w-full h-[1px] bg-[#6f5af5]  shadow-[0_0_20px_#6f5af5]"></div>
+        <div className="absolute mt-20 md:mt-24 w-full h-[1px] bg-[#6f5af5]  shadow-[0_0_20px_#6f5af5]"></div>
       </div>
 
       <div className="bg-black flex min-h-screen justify-around">
         <div className="flex flex-col mt-6">
           <div className="flex flex-col space-y-14 md:space-y-0 md:flex-row m-10 md:space-x-14">
             <div className="md:w-[35rem] md:h-96 flex justify-center items-center">
-              <div className="w-52 h-52 md:w-72 md:h-72 rounded-full border-[10px] border-pink-800 bg-[#1B1833] relative shadow-[0_0_40px_#ff4cf0] flex items-center justify-center">
+              <div className="w-52 h-52 md:w-72 md:h-72 rounded-full border-[10px] border-pink-800 bg-[#1B1833] transition-all relative shadow-[0_0_15px_#ff4cf0] flex items-center justify-center hover:-translate-y-2 cursor-pointer">
                 <div className="text-center">
                   <p className="text-white text-xl mb-2">Temperature</p>
                   <p className="text-5xl font-bold text-pink-400">31°C</p>
@@ -31,7 +31,7 @@ const Dashboard = () => {
             </div>
 
             <div className="relative flex flex-col space-y-14  md:space-y-11 ml-3 md:ml-0">
-              <div className="w-52 h-52 md:w-[35rem] md:h-40 border-2 rounded-full md:rounded-s-full md:rounded-r-none border-blue-800 bg-gradient-to-r from-[#1B1833] to-blue-900 shadow-[0_0_25px_#00f0ff] flex items-center px-8">
+              <div className="w-52 h-52 md:w-[35rem] md:h-40 border-2 rounded-full md:rounded-s-full md:rounded-r-none transition-all border-blue-800 bg-gradient-to-r from-[#1B1833] to-blue-900 shadow-[0_0_15px_#00f0ff] flex items-center px-8 cursor-pointer hover:-translate-y-2">
                 <div className="text-white text-center">
                   <p className="text-lg text-blue-300 ">HUMIDITY</p>
                   <p className="text-5xl font-semibold text-blue-400">
@@ -51,7 +51,7 @@ const Dashboard = () => {
                 </div>
               </div>
 
-              <div className=" w-52 h-52 md:w-[35rem] md:h-40 border-2 rounded-full md:rounded-s-full md:rounded-r-none border-purple-800 bg-gradient-to-r from-[#1B1833] to-purple-900 shadow-[0_0_25px_#d946ef] flex items-center px-10 md:px-8">
+              <div className=" w-52 h-52 md:w-[35rem] md:h-40 border-2 rounded-full md:rounded-s-full md:rounded-r-none transition-all border-purple-800 bg-gradient-to-r from-[#1B1833] to-purple-900 shadow-[0_0_15px_#d946ef] flex items-center px-10 md:px-8 cursor-pointer hover:-translate-y-2">
                 <div className="text-white">
                   <p className=" text-md md:text-lg uppercase tracking-wide text-purple-300">
                     Gas Level
@@ -71,7 +71,7 @@ const Dashboard = () => {
           </div>
 
           <div className="flex flex-col space-y-14 md:space-y-0 md:flex-row m-8 ml-12 md:ml-32 md:space-x-20 justify-center mb-28">
-            <div className="w-52 h-52 md:w-[22rem] md:h-[22rem] border-2 rounded-full border-yellow-800 bg-gradient-to-r from-[#1B1833] to-yellow-900 shadow-[0_0_25px_#facc15] flex flex-col justify-center items-center transition-all duration-500">
+            <div className="w-52 h-52 md:w-[22rem] md:h-[22rem] border-2 rounded-full border-yellow-800 bg-gradient-to-r from-[#1B1833] to-yellow-900 shadow-[0_0_15px_#facc15] flex flex-col justify-center items-center transition-all duration-500 cursor-pointer hover:-translate-y-2">
               <p className="text-yellow-300 text-xl uppercase tracking-wide mb-2">
                 Light Status
               </p>
@@ -90,7 +90,7 @@ const Dashboard = () => {
             </div>
 
             <div className="flex md:pt-16 md:pl-24 ">
-              <div className="w-52 h-52 md:w-[35rem] md:h-52  border-2 rounded-full md:rounded-e-full md:rounded-l-none border-green-800 bg-gradient-to-r from-[#1B1833] to-green-900 shadow-[0_0_25px_#4ade80] flex flex-col justify-center items-center transition-all duration-500 ">
+              <div className="w-52 h-52 md:w-[35rem] md:h-52  border-2 rounded-full md:rounded-e-full md:rounded-l-none border-green-800 bg-gradient-to-r from-[#1B1833] to-green-900 shadow-[0_0_15px_#4ade80] flex flex-col justify-center items-center transition-all duration-500 cursor-pointer hover:-translate-y-2 transition-all">
                 <p className="text-green-300 text-xl uppercase tracking-wide mb-2">
                   Flame Status
                 </p>
