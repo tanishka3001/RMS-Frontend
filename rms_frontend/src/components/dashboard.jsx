@@ -117,7 +117,7 @@ const Dashboard = () => {
                   <p className="text-green-300 text-xl uppercase tracking-wide mb-2">
                     Flame Status
                   </p>
-                  <p className="text-2xl md:text-4xl font-semibold text-green-400 mb-4">
+                  <p className="text-2xl text-center md:text-4xl font-semibold text-green-400 mb-4">
                     {flameStatus}
                   </p>
                 </div>
