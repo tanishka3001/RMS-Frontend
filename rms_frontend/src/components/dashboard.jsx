@@ -31,13 +31,13 @@ const Dashboard = () => {
     try {
       const userCredential = await signInWithEmailAndPassword(
         auth,
-        "testuser@gmail.com", // 🔁 Replace with your Firebase email
-        "pass1234" // 🔁 Replace with your Firebase password
+        "testuser@gmail.com",
+        "pass1234"
       );
-      console.log("✅ Logged in as:", userCredential.user.email);
+      console.log("Logged in as:", userCredential.user.email);
       return true;
     } catch (error) {
-      console.error("❌ Email login failed:", error.code, error.message);
+      console.error("Email login failed:", error.code, error.message);
       return false;
     }
   };
