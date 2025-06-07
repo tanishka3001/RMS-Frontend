@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 const Dashboard = () => {
   const temperature = 32;
   const humidity = 44;
