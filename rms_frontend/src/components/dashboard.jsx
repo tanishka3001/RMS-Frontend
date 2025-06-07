@@ -1,80 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, onValue } from "firebase/database";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-
-// Your Firebase config
-const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
-  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
-const auth = getAuth(app);
 
 const Dashboard = () => {
-  const [lightStatus, setLightStatus] = useState("loading..");
-  const [flameStatus, setFlameStatus] = useState("loading..");
-  const [humidity, setHumidity] = useState("loading..");
-  const [temperature, setTemperature] = useState("loading..");
-  const [gasLevel, setGasLevel] = useState("loading...");
-
-  const signInWithEmailPassword = async () => {
-    try {
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        "testuser@gmail.com", // 🔁 Replace with your Firebase email
-        "pass1234" // 🔁 Replace with your Firebase password
-      );
-      console.log("✅ Logged in as:", userCredential.user.email);
-      return true;
-    } catch (error) {
-      console.error("❌ Email login failed:", error.code, error.message);
-      return false;
-    }
-  };
-
-  useEffect(() => {
-    signInWithEmailPassword().then((success) => {
-      if (!success) return;
-
-      const lightRef = ref(database, "/iot/device/ldr");
-      const flameRef = ref(database, "/iot/device/flame");
-      const humiRef = ref(database, "/iot/device/humidity");
-      const tempRef = ref(database, "/iot/device/temperature");
-      const gasRef = ref(database, "/iot/device/gas");
-
-      onValue(tempRef, (snapshot) => {
-        const data = snapshot.val();
-        if (data !== null) setTemperature(data);
-      });
-      onValue(humiRef, (snapshot) => {
-        const data = snapshot.val();
-        if (data !== null) setHumidity(data);
-      });
-      onValue(flameRef, (snapshot) => {
-        const data = snapshot.val();
-        if (data !== null) setFlameStatus(data);
-      });
-      onValue(gasRef, (snapshot) => {
-        const data = snapshot.val();
-        if (data !== null) setGasLevel(data);
-      });
-      onValue(lightRef, (snapshot) => {
-        const data = snapshot.val();
-        if (data !== null) setLightStatus(data);
-      });
-    });
-  }, []);
-
+  const temperature = 32;
+  const humidity = 44;
+  const lightStatus = "Dark";
+  const flameStatus = "No flame";
+  const gasLevel = 144;
   return (
     <div className="bg-[#1B1833] text-white flex flex-col justify-center overflow-x-hidden">
       <div className="flex justify-center md:max-h-full max-h-[84px]">
