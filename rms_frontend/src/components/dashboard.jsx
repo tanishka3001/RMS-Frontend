@@ -132,7 +132,7 @@ const Dashboard = () => {
               </div>
 
               <div className=" w-52 h-52 md:w-[35rem] md:h-40 border-2 rounded-full md:rounded-s-full md:rounded-r-none transition-all border-purple-800 bg-[#121021] shadow-[0_0_15px_#d946ef] flex items-center px-10 md:px-8 cursor-pointer hover:-translate-y-2">
-                <div className="text-white">
+                <div className="text-white ml-5">
                   <p className=" text-md md:text-lg uppercase tracking-wide text-purple-300">
                     Gas Level
                   </p>
