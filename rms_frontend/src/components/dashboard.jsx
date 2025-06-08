@@ -112,9 +112,9 @@ const Dashboard = () => {
 
             <div className="relative flex flex-col space-y-14  md:space-y-11 ml-3 md:ml-0">
               <div className="w-52 h-52 md:w-[35rem] md:h-40 border-2 rounded-full md:rounded-s-full md:rounded-r-none transition-all border-blue-800 bg-[#121021] shadow-[0_0_15px_#00f0ff] flex items-center px-8 cursor-pointer hover:-translate-y-2">
-                <div className="text-white text-center">
-                  <p className="text-lg text-blue-300 ">HUMIDITY</p>
-                  <p className="text-5xl font-semibold text-blue-400">
+                <div className="text-white">
+                  <p className="text-lg text-blue-300 text-center md:text-left md:ml-5 ">HUMIDITY</p>
+                  <p className="text-5xl font-semibold text-blue-400 text-center md:ml-4 md:mt-1">
                     {humidity}%
                     <input
                       type="range"
@@ -122,7 +122,7 @@ const Dashboard = () => {
                       className=" ml-2 md:ml-4 "
                     ></input>
                   </p>
-                  <p className="hidden md:flex text-sm text-gray-400 mt-2">
+                  <p className="hidden md:flex text-sm text-gray-400 mt-2 ml-4">
                     Current moisture level
                   </p>
                 </div>
@@ -150,7 +150,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="flex flex-col space-y-14 md:space-y-4 md:flex-row m-8 ml-12 md:ml-32 md:space-x-20 justify-center mb-0">
+          <div className="flex flex-col space-y-14 md:space-y-4 md:flex-row m-8 ml-12 md:ml-32 md:space-x-20 justify-center mb-16">
             <div
               className={`w-52 h-52 md:w-[20rem] md:h-[20rem] border-2 rounded-full border-yellow-800 ${
                 lightStatus === "Light"
